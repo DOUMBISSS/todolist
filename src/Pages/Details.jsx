@@ -3,38 +3,25 @@ import Navbar from './Navbar';
 import {Link, useParams} from 'react-router-dom';
 import Footer from './Footer';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteTask, selectTask } from '../Redux/actions';
+import { deleteTask, getTask, selectTask, setTask } from '../Redux/actions';
 
 export default function Details () {
-  let id = useParams().id
-
-//   useEffect(() => {
-//     fetch(`http://127.0.0.1:5000/products/${id}`)
-//     .then((res)=>res.json())
-//     .then((article)=>{dispatch(getProduct(article))
-//     })
-//     }, [id])
-
-    // useEffect(() => {
-    //   fetch(`http://127.0.0.1:5000/laptops/${id}`)
-    //   .then((res)=>res.json())
-    //   .then((laptop)=>{dispatch(getLaptop(laptop))
-    //   })
-    //   }, [id])
-
+    let id = useParams().id
     const selectedTask = useSelector(state => state.taskReducer.selectedTask);
     const tasks = useSelector(state => state.taskReducer.tasks);
     const dispatch = useDispatch();
     const [nameTask, setNameTask] = useState("");
     const [description, setDescription] = useState("");
     const [modify , setModify] = useState(false);
-    const [search, setSearch]=useState('')
+    let task =tasks.find(task => task.id == id);
   
     useEffect(()=>{
       setDescription(selectedTask.description);
       setNameTask(selectedTask.nameTask);
       setModify(false);
     }, [selectedTask]);
+
+    // dispatch(getTask(task))
   
       const delTask = (taskId) =>{
         dispatch(deleteTask(taskId));
@@ -43,19 +30,13 @@ export default function Details () {
       const select = (id)=>{
         dispatch(selectTask(id));
       }
-  
-      const handleSearching = (event)=>{
-        setSearch(event.target.value)
-      }
       const handleName = (event) =>{
           setNameTask(event.target.value)
         }
         const handleDescription = (event) =>{
           setDescription(event.target.value)
-          // setModify(true)
         }
   
-        console.log(search)
         const handleAdd = ()=>{
           dispatch(addTask({
             id : uid(),
@@ -78,20 +59,17 @@ export default function Details () {
             setModify(true)
         }
   
-        const filterResult = (catItem)=>{
-          const filterData = tasks.filter((task) =>  task.status === catItem )
-              setData(filterData);
-              console.log(filterData)
-              }
+    
+              console.log(task)
             
     return (
      <div>
          <div className='container'>
           <Navbar/>
           <div className='container__todolist'>
-            <div key={task.id} className='todolist__content'>
+            <div key={id} className='todolist__content'>
                 <div className='todolist__first__part'>
-                <Link className='liste' to={`/details/${task.id}`}><h4 className='title'>{task.nameTask}</h4></Link>
+                <h4 className='title'>{task.nameTask}</h4>
                   <p className='description'>{task.description}</p>
                   <p className='date'>16/04/2024</p>
                 </div>
@@ -114,27 +92,10 @@ export default function Details () {
                   <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" onChange={handleDescription} value={description}></textarea>
                   <label for="floatingTextarea2">Description(s)</label>
                 </div>
-                {/* <div className='todolist__block__title'>
-                    <div className=''>
-
-                    </div>
-                </div> */}
+      
         <div className='btn__block'>
-        {modify ? <button className="btn__add" onClick={handleAdd}><i className="fa-solid fa-plus"></i> Ajouter</button> : <button className="btn__modify" onClick={()=>handleSet(selectedTask.id)} >  <i className="fa-solid fa-pen-to-square"></i> Modifier</button>   }
-        {/* <button className='btn__add'  onClick={handleAdd}>Ajouter</button> */}
+        <button className="btn__modify" onClick={()=>handleSet(selectedTask.id)} >  <i className="fa-solid fa-pen-to-square"></i> Modifier</button>  
         </div>
-          </div>
-          <div className='container__filter__todolist'>
-               <div className='container__filter__todolist__left'>
-               <button className='btn__filter' onClick={()=>{filterResult('En cours')}}>En cours</button>
-                <button className='btn__filter' onClick={()=>{filterResult('Effectué')}}>Effectué</button>
-               </div>
-               <div className='container__filter__todolist__right'>
-               <div class="form-floating col-8">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" onChange={handleSearching} value={search}/>
-                <label for="floatingInput">Rechercher</label>
-              </div>
-               </div>
           </div>
           
           </div>

@@ -51,3 +51,10 @@ export function deleteTask (taskId){
         payload : taskId
     }
 }
+
+export function getTask (task){
+    return {
+        type: 'GET-TASK',
+        payload: task
+    }
+}
