@@ -13,13 +13,10 @@ const initialState = {
         status:'Effectué',
         id:2,
     },
-
-
-
    
 ], 
 
-
+task:[],
 selectedTask : {}
 
 
@@ -30,6 +27,11 @@ export function taskReducer(state = initialState, action) {
     switch(action.type) {
         case "ADD-TODO":{
             return {...state, tasks : [...state.tasks, action.payload]}
+        }
+        case "GET-TASK": {
+            return {
+                ...state,task :action.payload
+            } 
         }
 
         case "SELECT-TASK":{
