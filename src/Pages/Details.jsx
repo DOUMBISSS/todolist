@@ -58,14 +58,15 @@ export default function Details () {
             setNameTask("");
             setModify(true)
         }
-  
-    
               console.log(task)
             
     return (
      <div>
          <div className='container'>
           <Navbar/>
+          <div className='container__back__btn'>
+
+          </div>
           <div className='container__todolist'>
             <div key={id} className='todolist__content'>
                 <div className='todolist__first__part'>

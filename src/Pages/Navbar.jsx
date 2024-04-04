@@ -34,7 +34,7 @@ function Navbar ({search,setSearch}) {
           </div>
           <div className='navbar--right'>
               <h6>doumbia77fode@gmail.com</h6>
-              <button className='btn__login'>Deconnecter</button>
+              <Link to="/login"><button className='btn__login'>Connecter</button></Link>
           </div>
          </div>
 
