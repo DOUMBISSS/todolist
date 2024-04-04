@@ -20,6 +20,10 @@ body{
   animation: fadeInLeft 1s linear;
   /* background-color:#f2f2f2; */
 }
+/* .main{
+  background-color:gainsboro;
+  color: #fff;
+} */
 header{
   width: 100%;
   height: 70px;
@@ -45,7 +49,10 @@ header{
 .navbar--logo{
   width: 200px;
   height: 50px;
-  border: 1px solid coral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid coral; */
 }
 .navbar--logo img{
   width: 100%;
@@ -57,9 +64,10 @@ h5 , h1 , h2,h3,h4,h6,p{
 }
 span{
   color: #f0c14b;
+  font-weight: bold;
 }
 .navbar--center{
-  width: 60%;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -74,8 +82,17 @@ span{
   width: 100%;
 }
 .navbar--right{
-  width: 20%;
-  border: 1px solid coral;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 1px solid coral; */
+}
+.btn__login{
+  background-color: #d8a765;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 0.5rem;
 }
 .header__bar{
   width: 100%;
@@ -98,18 +115,16 @@ span{
   text-decoration: none;
   color: rgb(15, 52, 90);
   font-size: 1rem;
-  margin-left: 1.3rem;
   font-weight: bold;
 }
 .liste:hover{
-  color: coral;
+  color: #d8a765;
 }
 .liste > i{
   font-size: 1rem;
 }
 .main--part--container{
   width: 100%;
-  height: 500px;
   /* display: flex;
   align-items: center;
   justify-content: center; */
@@ -118,9 +133,112 @@ span{
 .header__title{
   font-size: 2.5rem;
   text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
 }
-
-
+.container__todolist__header{
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  /* border: 1px solid coral; */
+}
+.btn__block{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid coral; */
+}
+.btn__add{
+  width: 200px;
+padding: 0.5rem;
+background-color:#d8a765;
+color: white;
+border-radius: 0.5rem;
+margin: 0 0.5rem;
+}
+.btn__modify{
+  width: 200px;
+  padding: 0.5rem;
+  background-color:#d8a765;
+  color: white;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem;
+}
+.container__todolist{
+  width: 100%;
+  /* height: 200px; */
+  margin: 1rem 0;
+  /* border: 1px solid coral; */
+}
+.todolist__content{
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 3px solid black;
+}
+.todolist__first__part{
+  width: 85%;
+  height: 100px;
+  padding: 0.7rem;
+  /* border: 1px solid coral; */
+}
+.date{
+  margin-top: 0.5rem;
+}
+.todolist__second__part{
+  width: 15%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid goldenrod; */
+}
+.second__part__content{
+  width: 60%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 1px solid goldenrod; */
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgb(12, 52, 103);
+}
+.container__filter__todolist{
+width: 100%;
+height: 70px;
+display: flex;
+align-items: center;
+justify-content: center;
+/* border: 1px solid coral; */
+}
+.container__filter__todolist__left{
+  width: 50%;
+  height:100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* border: 1px solid coral; */
+}
+.btn__filter{
+  padding: 0.7rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  margin: 0 0.7rem;
+}
+.container__filter__todolist__right{
+  width: 50%;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  /* border: 1px solid coral; */
+}
 
 .footer{
   width: 100%;
@@ -215,131 +333,8 @@ span{
 .icons{
   display: none;
 }
-.question--part{
-  width: 100%;
-  height: 50vh;
-  /* background-color:rgb(12, 52, 103); */
-  padding: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background: url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1774&q=80');
-  animation:fadeInRight 3s linear;
-}
-.question--part--content{
-  width: 90%;
-  height: 80%;
-  padding: 3rem;
-  text-align: center;
-}
-.question--part--content--box{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid coral;
-}
-.question--part--btn{
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.btn--contact{
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  background-color: coral;
-  margin-top: 1rem;
-  padding: 10px;
-  color: white;
-  cursor: pointer;
-  border-radius: 0.6rem;
-  animation: pulse 2s infinite;
-}
-.question{
-  color: white;
-}
-.section--business--presentation{
-  width: 100%;
-  height: 500px;
-  border: 1px solid coral;
-}
-.business--header{
-  font-weight: bold;
-  text-align: center;
-  color: rgb(15, 52, 90);
-  font-style: italic;
-  /* border-bottom: 2px solid rgb(15, 52, 90); */
-}
-.footer--link{
-  color: rgb(15, 52, 90);
-  text-decoration: none;
-}
-.main--contact{
-  width: 100%;
-  padding: 0.7rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: fadeInUp .7s linear;
-  
-  background-image: url('https://img.freepik.com/photos-premium/contactez-nous-concept-telephone-symbole-bloc-bois-courrier-adresse-bureau_52701-83.jpg?w=1060');
-}
-.main--contact--content{
-  width: 100%;
-  height: 95%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* border: 1px solid coral; */
-}
-.main--contact--content--right{
-  width: 60%;
-  padding: 1rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-  backdrop-filter: blur(2rem);
-  color: #fff;
-  /* border: 1px solid coral; */
-  display: flex;
-}
-.main--contact--content--left{
-  width: 40%;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* border: 1px solid coral; */
-}
-.main--contact--content--right--box{
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-  /* backdrop-filter: blur(2rem); */
-  color: #fff;
-  /* border: 1px solid coral; */
-}
-.form__container{
-  width: 80%;
-  height: 90%;
-  border: 1px solid gainsboro;
-  padding: 1rem;
-  border-radius: 0.7rem;
-   backdrop-filter: blur(2rem);
-}
-.header__contact{
-  color: white;
-  margin-left: 4rem;
-  /* font-weight: bold; */
-}
-.form-label{
-  color: white;
-}
+
+
 @media only screen and (max-width:575px){
   header{
     height: 100px;
@@ -359,113 +354,67 @@ span{
   .navbar--center--content{
    display: none;
   }
-  .icons{
-    width: 35%;
+  ..navbar--right{
+    width: 30%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 1rem;
+    justify-content: space-around;
+    /* border: 1px solid coral; */
   }
-  .navbar--logo{
-   display: none;
-  }
-  .logo--resp{
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-  }
-  .navbar--logo--resp{
-    width: 130px;
-    height: 90px;
-  }
-  .navbar--logo--resp img{
-    width: 100%;
-    height: 100%;
-  }
-  .main--part--container{
-    width: 100%;
-    height: auto;
+  ..navbar--right{
+    width: 30%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: 1px solid gainsboro;
+    justify-content: space-around;
+    /* border: 1px solid coral; */
   }
-  .main--part--container--image{
-    width: 100%;
-    height: 70%;
-  }
-  .container--presentation{
-    width: 100%;
-    height: auto;
-    display: block;
-    padding: 1rem;
-  }
-  .container--presentation--mb{
-    width: 100%;
-    display: block;
-    padding: 1rem;
-  }
-  .container--presentation--left{
-    width: 100%;
-    padding: 1rem;
-    /* border: 1px solid gainsboro; */
-  }
-  .container--presentation--right{
-    width: 100%;
-    height: 250px;
-  }
-  .container--presentation--right--box{
-    width: 100%;
-    height: 100%;
-  }
-  .part__newsletter{
-    width: 100%;
-    padding: 1rem;
-    background-color:#f0c14b;
+  .navbar--right{
+    width: 30%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
+    justify-content: space-around;
     /* border: 1px solid coral; */
+  }{
+
   }
-  .part__newsletter__content{
-    width: 100%;
-    height: 90%;
-    padding: 0.7rem;
-    text-align: center;
-    /* border: 1px solid coral; */
+  .title{
+    font-size: 1rem;
   }
-  .question--part{
-    height: 40vh;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0;
+  .description{
+    font-size: 0.9rem;
   }
-  .question--part--content{
-    padding: 0;
-  }
-  .news__container{
+  .container__filter__todolist{
     width: 100%;
     height: auto;
+    padding: 0.5rem;
     display: block;
-    /* border: 1px solid coral; */
+
+    }
+    .container__filter__todolist__left{
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 1rem;
+      /* border: 1px solid coral; */
+    }
+    .container__filter__todolist__right{
+      width: 100%;
+      justify-content: center;
+    }
+    input[type=email]{
+      width: 100%;
+    }
+  .todolist__first__part{
+    width: 75%;
   }
-  .news__container__content{
+  .date{
+    margin-top: 0.5rem;
+  }
+  .todolist__second__part{
+    width: 25%;
+  }
+  .second__part__content{
     width: 100%;
-    height: auto;
-    display: block;
-    /* border: 1px solid coral; */
-  }
-  .news__container__input{
-    margin-bottom: 1rem;
-  }
-  .btn__newsletter{
-    margin-top: 1rem;
-  }
-  .banner-2{
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
   }
 .footer{
   width: 100%;
@@ -474,49 +423,11 @@ span{
 .foot--content{
   display: block;
 }
-.schedule{
-  height: 100px;
-}
-.main--contact{
-  width: 100%;
-  height: auto;
-  display: block;
-  padding: 1rem 1rem;
-}
-.main--contact--content{
-  width: 100%;
-  height: 90%;
-  display: block;
-}
-.form__container{
-  width: 100%;
-  padding: 0.3rem;
-}
-.header__contact{
-  color: white;
-  margin-left: 0rem;
-}
-.main--contact--content--right{
-  width: 100%;
-  margin: 1rem 0;
-  border-radius: 0.7rem;
-  /* border: 1px solid coral; */
-}
-.main--contact--content--left{
-  width: 100%;
-  padding: 0;
-}
+
 
 }
 @media only screen and (min-width:576px) and (max-width:766px){
-
-  .main--part{
-    height:70vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .navbar--right--content{
+.navbar--right--content{
     display: none;
   }
   .navbar--left{
@@ -542,107 +453,11 @@ span{
     margin-bottom: 10px;
     color: #000;
   }
- .container{
-  padding: 0;
-}
-.row{
- display: block;
-}
-.cards{
-  width: 100%;
-  padding: 5px;
-}
-.description--enterprise{
-  width: 100%;
-  padding: 2rem;
-  display: block;
-  background-color: rgb(245, 240, 240);
-}
-.description--enterprise--content--left{
-  width: 100%;
-  padding:0;
-}
-.description--enterprise--content--right{
-  width: 100%;
-}
-.question--part{
-  height: 70vh;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 0;
-}
-.question--part--content{
-  padding: 0;
-}
-.main--contact{
-  width: 100%;
-  height: auto;
-  display: block;
-  padding: 1rem 2.5rem;
-}
-.main--contact--content{
-  width: 100%;
-  height: 90%;
-  display: block;
-}
-.form__container{
-  width: 100%;
-  padding: 0.3rem;
-}
-.header__contact{
-  color: white;
-  margin-left: 0rem;
-}
-.main--contact--content--right{
-  width: 100%;
-  margin: 1rem 0;
-  border-radius: 0.7rem;
-  /* border: 1px solid coral; */
-}
-.main--contact--content--left{
-  width: 100%;
-  padding: 0;
-}
-.container--home{
-  display: block;
-}
-.container--home--left--part{
-  width: 100%;
-}
-.container--home--left--part--content{
-  width: 95%;
-  height: 95%;
-}
-.container--home--left--part--content--image{
-  width: 100%;
-}
-.container--home--left--part--content--image--box{
-  width: 300px;
-  height: 300px;
-}
-.container--home--left--part--content--image--box img{
-  width: 100%;
-  height: 100%;
-}
-.container--home--left--part--content--images{
-  width: 100%;
-  height: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-}
-.images--thumbails{
-  width: 22%;
-}
-.images--thumbails--box{
-  width: 70px;
-  height: 70px;
-}
-.container--home--right--part{
-  width: 100%;
-}
+
+
+
+
+
 footer{
   width: 100%;
   height: auto;

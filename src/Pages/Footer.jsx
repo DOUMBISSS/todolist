@@ -7,9 +7,9 @@ export default function Footer  () {
     return (
       <div className='footer'>
           <div className='right'>
-            <p>Copyright © 2022,PurePro Cleaners </p>
+            <p>Copyright © 2022,My todolist </p>
             </div>
-          <div className="foot--content">
+          {/* <div className="foot--content">
               <div className='schedule'>
                 <h4 className='footer__title'>Horaire d'ouverture</h4>
                   <p>Lundi-Vendredi : 8h-16h</p>
@@ -31,11 +31,8 @@ export default function Footer  () {
                   <Link className='footer--link' to='https://wa.me/+2250103783449'><p><i className="fa-brands fa-whatsapp"></i>WhatsApp</p></Link>
                   <Link className='footer--link' to='https://www.tiktok.com/@purepro.cleaners?_t=8iwaY9ayEw1&_r=1'><p><i class="fa-brands fa-tiktok"></i> Tiktok</p></Link>
               </div>
-          </div>
+          </div> */}
 
-           <div className='name--developer'>
-            <p>Developed by Doumbia Fode (+225 0777880082)</p>
-           </div>
       </div>
     );
 }

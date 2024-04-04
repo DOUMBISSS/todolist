@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
-import { categoryReducer } from "./categoryReducer";
+import { todoListReducer } from "./todoListReducer";
+import { taskReducer } from "./listReducer";
 
 
 
 export const rootReducer = combineReducers({
-    categoryReducer:categoryReducer
+    todolistReducer:todoListReducer,
+    taskReducer:taskReducer
 })
